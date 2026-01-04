@@ -1,0 +1,11 @@
+services:
+  sandbox:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        SANDBOX_USER: ${SANDBOX_USER}
+        SANDBOX_PASSWORD: ${SANDBOX_PASSWORD}
+    container_name: ubuntu-sandbox
+    stdin_open: true
+    tty: true
